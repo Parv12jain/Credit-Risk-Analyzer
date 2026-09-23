@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CreditLens AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Animated Background -->
+
+    <div class="background">
+
+        <div class="orb orb-1"></div>
+
+        <div class="orb orb-2"></div>
+
+        <div class="orb orb-3"></div>
+
+    </div>
+
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ◈
+            </div>
+
+            <div>
+
+                <h2>
+                    CreditLens<span> AI</span>
+                </h2>
+
+                <small>
+                    Credit Risk Intelligence
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            Model Online
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Main -->
+
+    <main class="container">
+
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <div class="badge">
+
+                    <span>✦</span>
+
+                    AI CREDIT INTELLIGENCE
+
+                </div>
+
+
+                <h1>
+
+                    See the risk
+
+                    <span>
+                        Before you approve.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Analyze an applicant's financial profile and get an AI-powered
+                    assessment of their probability of loan default.
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <div class="stat-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <span>
+                        Prediction Engine
+                    </span>
+
+                    <strong>
+                        Machine Learning
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Application -->
+
+        <section class="application-grid">
+
+
+            <!-- FORM -->
+
+            <div class="card form-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            01 / APPLICATION
+                        </span>
+
+                        <h2>
+                            Applicant Profile
+                        </h2>
+
+                        <p>
+                            Provide the applicant's financial information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-counter">
+
+                        <span id="currentStep">
+                            1
+                        </span>
+
+                        / 3
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="loanForm">
+
+
+                    <!-- ============================= -->
+                    <!-- STEP 1 -->
+                    <!-- ============================= -->
+
+                    <div
+                        class="form-step active"
+                        data-step="1"
+                    >
+
+                        <div class="step-title">
+
+                            <span>
+                                01
+                            </span>
+
+                            Personal Information
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- AGE -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Age
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ◷
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="person_age"
+                                        placeholder="e.g. 28"
+                                        min="18"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- INCOME -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Annual Income
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="person_income"
+                                        placeholder="e.g. 50000"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- HOME OWNERSHIP -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Home Ownership
+                                </label>
+
+
+                                <div
+                                    class="custom-select"
+                                    data-name="person_home_ownership"
+                                >
+
+                                    <div class="select-trigger">
+
+                                        <span class="selected-content">
+
+                                            <span class="trigger-icon">
+                                                ⌂
+                                            </span>
+
+                                            <span class="selected-text">
+                                                Select ownership
+                                            </span>
+
+                                        </span>
+
+
+                                        <span class="select-arrow">
+                                            ⌄
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="select-options">
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="RENT"
+                                        >
+
+                                            <span class="option-icon">
+                                                ⌂
+                                            </span>
+
+                                            <span>
+                                                Rent
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="OWN"
+                                        >
+
+                                            <span class="option-icon">
+                                                ◆
+                                            </span>
+
+                                            <span>
+                                                Own
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="MORTGAGE"
+                                        >
+
+                                            <span class="option-icon">
+                                                ▣
+                                            </span>
+
+                                            <span>
+                                                Mortgage
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="OTHER"
+                                        >
+
+                                            <span class="option-icon">
+                                                •••
+                                            </span>
+
+                                            <span>
+                                                Other
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <input
+                                        type="hidden"
+                                        id="person_home_ownership"
+                                        value=""
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- EMPLOYMENT -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Employment Length
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ⌛
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="person_emp_length"
+                                        placeholder="Years"
+                                        step="0.1"
+                                        min="0"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            class="next-btn"
+                            onclick="nextStep()"
+                        >
+
+                            Continue
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- ============================= -->
+                    <!-- STEP 2 -->
+                    <!-- ============================= -->
+
+                    <div
+                        class="form-step"
+                        data-step="2"
+                    >
+
+
+                        <div class="step-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            Loan Details
+
+                        </div>
+
+
+
+                        <div class="input-grid">
+
+
+                            <!-- LOAN INTENT -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Loan Intent
+                                </label>
+
+
+                                <div
+                                    class="custom-select"
+                                    data-name="loan_intent"
+                                >
+
+                                    <div class="select-trigger">
+
+                                        <span class="selected-content">
+
+                                            <span class="trigger-icon">
+                                                ◉
+                                            </span>
+
+                                            <span class="selected-text">
+                                                Select purpose
+                                            </span>
+
+                                        </span>
+
+
+                                        <span class="select-arrow">
+                                            ⌄
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="select-options">
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="PERSONAL"
+                                        >
+
+                                            <span class="option-icon">
+                                                ●
+                                            </span>
+
+                                            <span>
+                                                Personal
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="EDUCATION"
+                                        >
+
+                                            <span class="option-icon">
+                                                ◆
+                                            </span>
+
+                                            <span>
+                                                Education
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="MEDICAL"
+                                        >
+
+                                            <span class="option-icon">
+                                                ✚
+                                            </span>
+
+                                            <span>
+                                                Medical
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="VENTURE"
+                                        >
+
+                                            <span class="option-icon">
+                                                ↗
+                                            </span>
+
+                                            <span>
+                                                Venture
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="HOMEIMPROVEMENT"
+                                        >
+
+                                            <span class="option-icon">
+                                                ⌂
+                                            </span>
+
+                                            <span>
+                                                Home Improvement
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="DEBTCONSOLIDATION"
+                                        >
+
+                                            <span class="option-icon">
+                                                ↔
+                                            </span>
+
+                                            <span>
+                                                Debt Consolidation
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <input
+                                        type="hidden"
+                                        id="loan_intent"
+                                        value=""
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- LOAN GRADE -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Loan Grade
+                                </label>
+
+
+                                <div
+                                    class="custom-select"
+                                    data-name="loan_grade"
+                                >
+
+                                    <div class="select-trigger">
+
+                                        <span class="selected-content">
+
+                                            <span class="trigger-icon">
+                                                ★
+                                            </span>
+
+                                            <span class="selected-text">
+                                                Select grade
+                                            </span>
+
+                                        </span>
+
+
+                                        <span class="select-arrow">
+                                            ⌄
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="select-options grade-options">
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="A"
+                                        >
+
+                                            <span class="grade-badge grade-a">
+                                                A
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Excellent
+                                                </strong>
+
+                                                <small>
+                                                    Lowest risk grade
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="B"
+                                        >
+
+                                            <span class="grade-badge grade-b">
+                                                B
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Good
+                                                </strong>
+
+                                                <small>
+                                                    Good credit profile
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="C"
+                                        >
+
+                                            <span class="grade-badge grade-c">
+                                                C
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Fair
+                                                </strong>
+
+                                                <small>
+                                                    Moderate profile
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="D"
+                                        >
+
+                                            <span class="grade-badge grade-d">
+                                                D
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Below Average
+                                                </strong>
+
+                                                <small>
+                                                    Higher risk profile
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="E"
+                                        >
+
+                                            <span class="grade-badge grade-e">
+                                                E
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    High Risk
+                                                </strong>
+
+                                                <small>
+                                                    Elevated credit risk
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="F"
+                                        >
+
+                                            <span class="grade-badge grade-f">
+                                                F
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Very High Risk
+                                                </strong>
+
+                                                <small>
+                                                    Significant risk profile
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="G"
+                                        >
+
+                                            <span class="grade-badge grade-g">
+                                                G
+                                            </span>
+
+                                            <span>
+
+                                                <strong>
+                                                    Extremely High Risk
+                                                </strong>
+
+                                                <small>
+                                                    Highest grade risk
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <input
+                                        type="hidden"
+                                        id="loan_grade"
+                                        value=""
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- LOAN AMOUNT -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Loan Amount
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="loan_amnt"
+                                        placeholder="e.g. 10000"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- INTEREST -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Interest Rate (%)
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        %
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="loan_int_rate"
+                                        placeholder="e.g. 11.5"
+                                        step="0.01"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="navigation">
+
+
+                            <button
+                                type="button"
+                                class="back-btn"
+                                onclick="previousStep()"
+                            >
+                                ← Back
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="next-btn"
+                                onclick="nextStep()"
+                            >
+                                Continue →
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ============================= -->
+                    <!-- STEP 3 -->
+                    <!-- ============================= -->
+
+                    <div
+                        class="form-step"
+                        data-step="3"
+                    >
+
+
+                        <div class="step-title">
+
+                            <span>
+                                03
+                            </span>
+
+                            Credit Profile
+
+                        </div>
+
+
+
+                        <div class="input-grid">
+
+
+                            <!-- LOAN INCOME -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Loan / Income Ratio
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ↗
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="loan_percent_income"
+                                        placeholder="e.g. 0.20"
+                                        step="0.01"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PREVIOUS DEFAULT -->
+
+                            <div class="input-group">
+
+                                <label>
+                                    Previous Default
+                                </label>
+
+
+                                <div
+                                    class="custom-select"
+                                    data-name="cb_person_default_on_file"
+                                >
+
+                                    <div class="select-trigger">
+
+                                        <span class="selected-content">
+
+                                            <span class="trigger-icon">
+                                                ⚠
+                                            </span>
+
+                                            <span class="selected-text">
+                                                Select
+                                            </span>
+
+                                        </span>
+
+
+                                        <span class="select-arrow">
+                                            ⌄
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="select-options">
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="Y"
+                                        >
+
+                                            <span class="check-icon">
+                                                ✓
+                                            </span>
+
+                                            <span>
+                                                Yes
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="select-option"
+                                            data-value="N"
+                                        >
+
+                                            <span class="empty-check"></span>
+
+                                            <span>
+                                                No
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <input
+                                        type="hidden"
+                                        id="cb_person_default_on_file"
+                                        value=""
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- CREDIT HISTORY -->
+
+                            <div class="input-group full">
+
+                                <label>
+                                    Credit History Length
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span>
+                                        ◴
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="cb_person_cred_hist_length"
+                                        placeholder="Years"
+                                        min="0"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="navigation">
+
+
+                            <button
+                                type="button"
+                                class="back-btn"
+                                onclick="previousStep()"
+                            >
+                                ← Back
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="predict-btn"
+                                id="predictBtn"
+                            >
+
+                                <span>
+                                    Analyze Risk
+                                </span>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div class="card result-card">
+
+
+                <div class="card-header result-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            02 / AI ANALYSIS
+                        </span>
+
+                        <h2>
+                            Risk Assessment
+                        </h2>
+
+                    </div>
+
+
+                    <div class="ai-indicator">
+                        AI
+                    </div>
+
+                </div>
+
+
+
+                <!-- INITIAL -->
+
+                <div
+                    id="initialResult"
+                    class="initial-result"
+                >
+
+                    <div class="radar">
+
+                        <div class="radar-ring ring-1"></div>
+
+                        <div class="radar-ring ring-2"></div>
+
+                        <div class="radar-ring ring-3"></div>
+
+                        <div class="radar-center">
+                            ✦
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Awaiting Analysis
+                    </h3>
+
+
+                    <p>
+                        Complete the application form to generate
+                        an AI-powered credit risk assessment.
+                    </p>
+
+                </div>
+
+
+
+                <!-- LOADING -->
+
+                <div
+                    id="loadingResult"
+                    class="loading-result hidden"
+                >
+
+                    <div class="loader"></div>
+
+                    <h3>
+                        Analyzing Profile
+                    </h3>
+
+
+                    <p>
+                        Running applicant data through the
+                        prediction engine...
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div
+                    id="predictionResult"
+                    class="prediction-result hidden"
+                >
+
+
+                    <div
+                        id="riskIcon"
+                        class="risk-icon"
+                    >
+                        ✓
+                    </div>
+
+
+                    <span
+                        id="riskLabel"
+                        class="risk-label"
+                    >
+                        LOW RISK
+                    </span>
+
+
+                    <div class="probability">
+
+                        <span id="probabilityValue">
+                            0%
+                        </span>
+
+                        <small>
+                            Default Probability
+                        </small>
+
+                    </div>
+
+
+                    <div class="meter">
+
+                        <div
+                            id="meterFill"
+                            class="meter-fill"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="result-details">
+
+                        <div>
+
+                            <span>
+                                Model Decision
+                            </span>
+
+                            <strong id="decision">
+                                Low Risk
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Threshold
+                            </span>
+
+                            <strong id="threshold">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="reset-btn"
+                        onclick="resetPrediction()"
+                    >
+                        ↻ New Assessment
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                CreditLens AI
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                ML-powered credit risk assessment
+            </span>
+
+            <span class="footer-right">
+                FastAPI · Machine Learning
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
