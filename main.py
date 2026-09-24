@@ -6,6 +6,7 @@ from contextlib import asynccontextmanager
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
+
 ml_model = {}
 
 
@@ -26,6 +27,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
+# Serve frontend static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
 class LoanApplication(BaseModel):
 
     person_age: int
@@ -41,9 +46,10 @@ class LoanApplication(BaseModel):
     cb_person_cred_hist_length: int
 
 
+# Serve UI at root
 @app.get("/")
-def greet():
-    return {"message": "API is Loading..."}
+def frontend():
+    return FileResponse("static/index.html")
 
 
 @app.post("/predict")
@@ -61,10 +67,3 @@ def predict(data: LoanApplication):
         "threshold": ml_model["threshold"],
         "Result": "High Risk" if prediction == 1 else "Low Risk"
     }
-
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-
-@app.get("/app")
-def frontend():
-    return FileResponse("static/index.html")
